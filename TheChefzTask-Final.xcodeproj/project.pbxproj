@@ -16,7 +16,6 @@
 		7C171903289DD267000F02AD /* NetworkDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1718D1289DD265000F02AD /* NetworkDataRepository.swift */; };
 		7C171904289DD267000F02AD /* DatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1718D3289DD265000F02AD /* DatabaseProtocol.swift */; };
 		7C171905289DD267000F02AD /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1718D4289DD265000F02AD /* NetworkServiceProtocol.swift */; };
-		7C171906289DD267000F02AD /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1718D6289DD265000F02AD /* Box.swift */; };
 		7C171907289DD267000F02AD /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1718D7289DD265000F02AD /* ResponseType.swift */; };
 		7C171908289DD267000F02AD /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1718DA289DD265000F02AD /* BookCollectionViewCell.swift */; };
 		7C171909289DD267000F02AD /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C1718DB289DD265000F02AD /* BookCollectionViewCell.xib */; };
@@ -53,7 +52,6 @@
 		7C1718D1289DD265000F02AD /* NetworkDataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDataRepository.swift; sourceTree = "<group>"; };
 		7C1718D3289DD265000F02AD /* DatabaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseProtocol.swift; sourceTree = "<group>"; };
 		7C1718D4289DD265000F02AD /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
-		7C1718D6289DD265000F02AD /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		7C1718D7289DD265000F02AD /* ResponseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
 		7C1718DA289DD265000F02AD /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		7C1718DB289DD265000F02AD /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -111,14 +109,13 @@
 		7C1718B3289DD156000F02AD /* TheChefzTask-Final */ = {
 			isa = PBXGroup;
 			children = (
-				7C1718D8289DD265000F02AD /* Cell */,
+				7C17191B289DD416000F02AD /* Assets */,
 				7C1718DC289DD266000F02AD /* Core */,
 				7C1718D5289DD265000F02AD /* Helpers */,
 				7C1718E1289DD266000F02AD /* Navigation */,
 				7C1718E4289DD266000F02AD /* Scenes */,
 				7C1718C8289DD265000F02AD /* Services */,
 				7C1718FC289DD267000F02AD /* Utilities */,
-				7C1718BD289DD157000F02AD /* Assets.xcassets */,
 				7C1718C2289DD157000F02AD /* Info.plist */,
 			);
 			path = "TheChefzTask-Final";
@@ -174,7 +171,7 @@
 		7C1718D5289DD265000F02AD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				7C1718D6289DD265000F02AD /* Box.swift */,
+				7C1718D8289DD265000F02AD /* Cell */,
 				7C1718D7289DD265000F02AD /* ResponseType.swift */,
 			);
 			path = Helpers;
@@ -330,6 +327,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		7C17191B289DD416000F02AD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7C1718BD289DD157000F02AD /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		7E3A749F6D733BEF38CF5FF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,7 +472,6 @@
 			files = (
 				7C17190B289DD267000F02AD /* AppDelegate.swift in Sources */,
 				7C17190D289DD267000F02AD /* NavigationRoute.swift in Sources */,
-				7C171906289DD267000F02AD /* Box.swift in Sources */,
 				7C17190E289DD267000F02AD /* Route.swift in Sources */,
 				7C171913289DD267000F02AD /* SearchViewModel.swift in Sources */,
 				7C171903289DD267000F02AD /* NetworkDataRepository.swift in Sources */,
