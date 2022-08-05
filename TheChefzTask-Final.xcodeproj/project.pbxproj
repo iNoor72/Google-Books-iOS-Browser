@@ -13,9 +13,11 @@
 		7C1718BC289DD156000F02AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C1718BA289DD156000F02AD /* Main.storyboard */; };
 		7C1718BE289DD157000F02AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C1718BD289DD157000F02AD /* Assets.xcassets */; };
 		7C1718C1289DD157000F02AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C1718BF289DD157000F02AD /* LaunchScreen.storyboard */; };
+		B31B03F36102016F9CF9C4DC /* Pods_TheChefzTask_Final.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0068F74100A1971E0891A7 /* Pods_TheChefzTask_Final.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6107F7B6446EBA683CBA700F /* Pods-TheChefzTask-Final.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheChefzTask-Final.debug.xcconfig"; path = "Target Support Files/Pods-TheChefzTask-Final/Pods-TheChefzTask-Final.debug.xcconfig"; sourceTree = "<group>"; };
 		7C1718B1289DD156000F02AD /* TheChefzTask-Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TheChefzTask-Final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1718B4289DD156000F02AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C1718B6289DD156000F02AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		7C1718BD289DD157000F02AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C1718C0289DD157000F02AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C1718C2289DD157000F02AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F0068F74100A1971E0891A7 /* Pods_TheChefzTask_Final.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheChefzTask_Final.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2BC1847B1FBBACC2E8D1244 /* Pods-TheChefzTask-Final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheChefzTask-Final.release.xcconfig"; path = "Target Support Files/Pods-TheChefzTask-Final/Pods-TheChefzTask-Final.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B31B03F36102016F9CF9C4DC /* Pods_TheChefzTask_Final.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				7C1718B3289DD156000F02AD /* TheChefzTask-Final */,
 				7C1718B2289DD156000F02AD /* Products */,
+				B18BFF109F6CDA893975DB4F /* Pods */,
+				7E3A749F6D733BEF38CF5FF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = "TheChefzTask-Final";
 			sourceTree = "<group>";
 		};
+		7E3A749F6D733BEF38CF5FF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F0068F74100A1971E0891A7 /* Pods_TheChefzTask_Final.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B18BFF109F6CDA893975DB4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6107F7B6446EBA683CBA700F /* Pods-TheChefzTask-Final.debug.xcconfig */,
+				A2BC1847B1FBBACC2E8D1244 /* Pods-TheChefzTask-Final.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C1718C5289DD157000F02AD /* Build configuration list for PBXNativeTarget "TheChefzTask-Final" */;
 			buildPhases = (
+				73E67737E1CF761EF9866F4D /* [CP] Check Pods Manifest.lock */,
 				7C1718AD289DD156000F02AD /* Sources */,
 				7C1718AE289DD156000F02AD /* Frameworks */,
 				7C1718AF289DD156000F02AD /* Resources */,
+				3CFD2307DD762D6D3A557BB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CFD2307DD762D6D3A557BB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TheChefzTask-Final/Pods-TheChefzTask-Final-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TheChefzTask-Final/Pods-TheChefzTask-Final-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TheChefzTask-Final/Pods-TheChefzTask-Final-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73E67737E1CF761EF9866F4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheChefzTask-Final-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7C1718AD289DD156000F02AD /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		7C1718C6289DD157000F02AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6107F7B6446EBA683CBA700F /* Pods-TheChefzTask-Final.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		7C1718C7289DD157000F02AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2BC1847B1FBBACC2E8D1244 /* Pods-TheChefzTask-Final.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
