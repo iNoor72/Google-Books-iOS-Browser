@@ -10,12 +10,12 @@ import RxSwift
 import RxCocoa
 
 class SearchViewModel {
-    private let databaseManager: DatabaseProtocol
-    private let networkManager: NetworkServiceProtocol
+//    private let databaseManager: DatabaseProtocol
+//    private let networkManager: NetworkServiceProtocol
+    private let repository:  SearchRepository
     
-    init(databaseManager: DatabaseProtocol = RealmManager.shared, networkManager: NetworkServiceProtocol = NetworkManager.shared) {
-        self.databaseManager = databaseManager
-        self.networkManager = networkManager
+    init(repository: SearchRepository = SearchRepository(cache: RealmManager.shared, network: NetworkManager.shared)) {
+        self.repository = repository
     }
     
     var books: BooksResponse?
@@ -31,15 +31,15 @@ class SearchViewModel {
     var isIndicatorHiddenSubject = BehaviorSubject<Bool>(value: true)
     
     func deleteLastSearchResult() {
-        databaseManager.deleteAll()
+        repository.deleteLastSearchResultFromDatabase()
     }
     
     func deleteLastSearchKeyword() {
-        databaseManager.deleteLastKeyword()
+        repository.deleteLastSearchKeywordFromDatabase()
     }
     
     func saveLastSearch(keyword: String) {
-        databaseManager.saveLastSearch(keyword: keyword)
+        repository.saveLastSearchToDatabase(keyword: keyword)
     }
     
     func searchForBook(page: Int) {
@@ -51,7 +51,7 @@ class SearchViewModel {
     
     func saveSearchToDatabase(books: [Book]) {
         for book in books {
-            databaseManager.save(book: book)
+            repository.saveSearchResultToDatabase(book: book)
         }
     }
     
@@ -63,8 +63,7 @@ class SearchViewModel {
         self.isIndicatorOffSubject.onNext(false)
         self.isIndicatorHiddenSubject.onNext(false)
         
-        networkManager.fetchData(url: .books(bookName: bookName, page: page), expectedType: BooksResponse.self)
-        { [weak self] result in
+        repository.fetchBooksFromNetwork(bookName: bookName, page: page) { [weak self] result in
             guard let self = self else { return }
             
             switch result {
@@ -80,7 +79,6 @@ class SearchViewModel {
                     self.booksModelSubject.onNext(bookItems)
                 }
             }
-            
             self.isIndicatorOffSubject.onNext(true)
             self.isIndicatorHiddenSubject.onNext(true)
         }
@@ -90,8 +88,7 @@ class SearchViewModel {
         self.isIndicatorOffSubject.onNext(false)
         self.isIndicatorHiddenSubject.onNext(false)
         
-        networkManager.fetchData(url: .books(bookName: bookName, page: page), expectedType: BooksResponse.self)
-        { [weak self] (result) in
+        repository.fetchBooksFromNetwork(bookName: bookName, page: page) { [weak self] result in
             guard let self = self else { return }
             
             switch result {

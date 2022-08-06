@@ -37,6 +37,7 @@
 		7C171919289DD267000F02AD /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1718FB289DD266000F02AD /* BookDetailsViewController.swift */; };
 		7C17191A289DD267000F02AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1718FD289DD267000F02AD /* Constants.swift */; };
 		7C844F39289EA83F00183693 /* BooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C844F38289EA83F00183693 /* BooksRepository.swift */; };
+		7C844F3D289EAA8800183693 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C844F3C289EAA8800183693 /* SearchRepository.swift */; };
 		B31B03F36102016F9CF9C4DC /* Pods_TheChefzTask_Final.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0068F74100A1971E0891A7 /* Pods_TheChefzTask_Final.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		7C1718FB289DD266000F02AD /* BookDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 		7C1718FD289DD267000F02AD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7C844F38289EA83F00183693 /* BooksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksRepository.swift; sourceTree = "<group>"; };
+		7C844F3C289EAA8800183693 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
 		7F0068F74100A1971E0891A7 /* Pods_TheChefzTask_Final.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheChefzTask_Final.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2BC1847B1FBBACC2E8D1244 /* Pods-TheChefzTask-Final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheChefzTask-Final.release.xcconfig"; path = "Target Support Files/Pods-TheChefzTask-Final/Pods-TheChefzTask-Final.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -265,6 +267,7 @@
 			children = (
 				7C1718F1289DD266000F02AD /* Search.storyboard */,
 				7C1718F2289DD266000F02AD /* NavigationRoutes */,
+				7C844F3B289EAA6D00183693 /* SearchScreenServices */,
 				7C1718EF289DD266000F02AD /* ViewModel */,
 				7C1718F4289DD266000F02AD /* View */,
 			);
@@ -352,6 +355,14 @@
 				7C1718CB289DD265000F02AD /* LastSearchModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		7C844F3B289EAA6D00183693 /* SearchScreenServices */ = {
+			isa = PBXGroup;
+			children = (
+				7C844F3C289EAA8800183693 /* SearchRepository.swift */,
+			);
+			path = SearchScreenServices;
 			sourceTree = "<group>";
 		};
 		7E3A749F6D733BEF38CF5FF7 /* Frameworks */ = {
@@ -491,6 +502,7 @@
 			files = (
 				7C17190B289DD267000F02AD /* AppDelegate.swift in Sources */,
 				7C17190D289DD267000F02AD /* NavigationRoute.swift in Sources */,
+				7C844F3D289EAA8800183693 /* SearchRepository.swift in Sources */,
 				7C17190E289DD267000F02AD /* Route.swift in Sources */,
 				7C171913289DD267000F02AD /* SearchViewModel.swift in Sources */,
 				7C171903289DD267000F02AD /* NetworkDataRepository.swift in Sources */,
