@@ -17,8 +17,8 @@ class MainViewModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        self.cache = MockRealmManager()
-        self.network = MockNetworkManager()
+        self.cache = RealmManager.shared
+        self.network = NetworkManager.shared
         self.repository = MainScreenRepository(cache: cache, network: network)
         self.sut = MainViewModel(repository: repository)
     }
@@ -29,5 +29,33 @@ class MainViewModelTests: XCTestCase {
         self.network = nil
         self.repository = nil
         self.sut = nil
+    }
+    
+    func test_fetch_last_search_keyword() {
+        cache.deleteLastKeyword()
+        let testKeyword = "Noor testing"
+        cache.saveLastSearch(keyword: testKeyword)
+        
+        sut.fetchLastSearchKeyword()
+        
+        XCTAssertEqual(testKeyword, repository.fetchLastSearchKeyword())
+    }
+    
+    func test_fetching_books() {
+        cache.save(book: Book())
+        
+        var booksFetched = [Book]()
+        sut.fetchBooksFromDatabase()
+        
+        let expectation = XCTestExpectation(description: "response")
+        
+        repository.fetchDataFromDatabase { books in
+            booksFetched = books
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 1)
+        XCTAssertTrue(booksFetched.isEmpty == false)
+
     }
 }

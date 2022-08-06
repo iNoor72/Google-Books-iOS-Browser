@@ -17,8 +17,8 @@ class SearchViewModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        self.cache = MockRealmManager()
-        self.network = MockNetworkManager()
+        self.cache = RealmManager.shared
+        self.network = NetworkManager.shared
         self.repository = SearchRepository(cache: cache, network: network)
         self.sut = SearchViewModel(repository: repository)
     }
@@ -29,5 +29,21 @@ class SearchViewModelTests: XCTestCase {
         self.network = nil
         self.repository = nil
         self.sut = nil
+    }
+    
+    func test_save_last_search_keyword() {
+        let keyword = "Noor testing"
+        sut.saveLastSearch(keyword: keyword)
+        
+        XCTAssertEqual(keyword, cache.fetchLastSearch()?.first?.bookTitle ?? "WRONG!")
+    }
+    
+    func test_delete_last_search_keyword() {
+        let keyword = "Noor testing"
+        sut.saveLastSearch(keyword: keyword)
+        
+        sut.deleteLastSearchKeyword()
+        
+        XCTAssertNil(cache.fetchLastSearch()?.first?.bookTitle)
     }
 }

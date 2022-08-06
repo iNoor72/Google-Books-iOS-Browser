@@ -23,7 +23,7 @@ class MainViewModel {
         self.repository = repository
     }
     
-    func fetchLastSearch() {
+    func fetchLastSearchKeyword() {
         let keyword = repository.fetchLastSearchKeyword()
         lastSearchBehavior = BehaviorRelay.init(value: keyword ?? "No search.")
     }

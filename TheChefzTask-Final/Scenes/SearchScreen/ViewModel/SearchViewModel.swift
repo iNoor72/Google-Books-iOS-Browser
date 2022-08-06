@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 
 class SearchViewModel {
+    private let repository: SearchRepository
     var books: BooksResponse?
     
     var isIndicatorOffSubject = BehaviorSubject<Bool>(value: true)
@@ -21,8 +22,6 @@ class SearchViewModel {
     var booksModelObservable : Observable<[Book]> {
         return booksModelSubject
     }
-    
-    private let repository: SearchRepository
     
     init(repository: SearchRepository = SearchRepository(cache: RealmManager.shared, network: NetworkManager.shared)) {
         self.repository = repository

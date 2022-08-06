@@ -31,7 +31,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate {
     }
     
     private func fetchData() {
-        mainViewModel.fetchLastSearch()
+        mainViewModel.fetchLastSearchKeyword()
         mainViewModel.fetchBooksFromDatabase()
     }
     

@@ -37,14 +37,8 @@
 		7C17191A289DD267000F02AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1718FD289DD267000F02AD /* Constants.swift */; };
 		7C844F39289EA83F00183693 /* MainScreenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C844F38289EA83F00183693 /* MainScreenRepository.swift */; };
 		7C844F3D289EAA8800183693 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C844F3C289EAA8800183693 /* SearchRepository.swift */; };
-		7C844F50289EAEDE00183693 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C844F4F289EAEDE00183693 /* MockNetworkManager.swift */; };
-		7C844F52289EAF7F00183693 /* MockRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C844F51289EAF7F00183693 /* MockRealmManager.swift */; };
 		7C844F58289EC04200183693 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C844F57289EC04200183693 /* MainViewModelTests.swift */; };
 		7C844F5A289EC13600183693 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C844F59289EC13600183693 /* SearchViewModelTests.swift */; };
-		7C844F5C289EC16900183693 /* MockNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C844F5B289EC16900183693 /* MockNetworkTests.swift */; };
-		7C844F5F289EC17600183693 /* RealNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C844F5E289EC17500183693 /* RealNetworkTests.swift */; };
-		7C844F61289EC18500183693 /* MockDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C844F60289EC18500183693 /* MockDatabaseTests.swift */; };
-		7C844F63289EC18E00183693 /* RealDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C844F62289EC18E00183693 /* RealDatabaseTests.swift */; };
 		B31B03F36102016F9CF9C4DC /* Pods_TheChefzTask_Final.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0068F74100A1971E0891A7 /* Pods_TheChefzTask_Final.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,14 +87,15 @@
 		7C844F38289EA83F00183693 /* MainScreenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRepository.swift; sourceTree = "<group>"; };
 		7C844F3C289EAA8800183693 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
 		7C844F42289EAE6200183693 /* TheChefzTask-FinalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TheChefzTask-FinalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C844F4F289EAEDE00183693 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
-		7C844F51289EAF7F00183693 /* MockRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRealmManager.swift; sourceTree = "<group>"; };
 		7C844F57289EC04200183693 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		7C844F59289EC13600183693 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
-		7C844F5B289EC16900183693 /* MockNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkTests.swift; sourceTree = "<group>"; };
-		7C844F5E289EC17500183693 /* RealNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealNetworkTests.swift; sourceTree = "<group>"; };
-		7C844F60289EC18500183693 /* MockDatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatabaseTests.swift; sourceTree = "<group>"; };
-		7C844F62289EC18E00183693 /* RealDatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealDatabaseTests.swift; sourceTree = "<group>"; };
+		7C844F74289EC79D00183693 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C844F76289ED2CD00183693 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C844F78289ED2CD00183693 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C844F7A289ED2CD00183693 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C844F7C289ED2CD00183693 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C844F7E289ED2CD00183693 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C844F80289ED2CD00183693 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0068F74100A1971E0891A7 /* Pods_TheChefzTask_Final.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheChefzTask_Final.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2BC1847B1FBBACC2E8D1244 /* Pods-TheChefzTask-Final.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheChefzTask-Final.release.xcconfig"; path = "Target Support Files/Pods-TheChefzTask-Final/Pods-TheChefzTask-Final.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,8 +157,8 @@
 		7C1718C8289DD265000F02AD /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7C844F4C289EAE7D00183693 /* MockService */,
-				7C844F4B289EAE7800183693 /* RealService */,
+				7C1718C9289DD265000F02AD /* Database */,
+				7C1718CC289DD265000F02AD /* Network */,
 				7C844F3A289EA99800183693 /* Models */,
 				7C1718D2289DD265000F02AD /* Protocols */,
 			);
@@ -401,45 +396,9 @@
 		7C844F43289EAE6200183693 /* TheChefzTask-FinalTests */ = {
 			isa = PBXGroup;
 			children = (
-				7C844F55289EB05B00183693 /* Database */,
-				7C844F54289EB05100183693 /* Network */,
 				7C844F53289EB04E00183693 /* ViewModels */,
 			);
 			path = "TheChefzTask-FinalTests";
-			sourceTree = "<group>";
-		};
-		7C844F4B289EAE7800183693 /* RealService */ = {
-			isa = PBXGroup;
-			children = (
-				7C1718C9289DD265000F02AD /* Database */,
-				7C1718CC289DD265000F02AD /* Network */,
-			);
-			path = RealService;
-			sourceTree = "<group>";
-		};
-		7C844F4C289EAE7D00183693 /* MockService */ = {
-			isa = PBXGroup;
-			children = (
-				7C844F4D289EAE8900183693 /* MockDatabase */,
-				7C844F4E289EAE8C00183693 /* MockNetwork */,
-			);
-			path = MockService;
-			sourceTree = "<group>";
-		};
-		7C844F4D289EAE8900183693 /* MockDatabase */ = {
-			isa = PBXGroup;
-			children = (
-				7C844F51289EAF7F00183693 /* MockRealmManager.swift */,
-			);
-			path = MockDatabase;
-			sourceTree = "<group>";
-		};
-		7C844F4E289EAE8C00183693 /* MockNetwork */ = {
-			isa = PBXGroup;
-			children = (
-				7C844F4F289EAEDE00183693 /* MockNetworkManager.swift */,
-			);
-			path = MockNetwork;
 			sourceTree = "<group>";
 		};
 		7C844F53289EB04E00183693 /* ViewModels */ = {
@@ -451,27 +410,16 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		7C844F54289EB05100183693 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				7C844F5B289EC16900183693 /* MockNetworkTests.swift */,
-				7C844F5E289EC17500183693 /* RealNetworkTests.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		7C844F55289EB05B00183693 /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				7C844F60289EC18500183693 /* MockDatabaseTests.swift */,
-				7C844F62289EC18E00183693 /* RealDatabaseTests.swift */,
-			);
-			path = Database;
-			sourceTree = "<group>";
-		};
 		7E3A749F6D733BEF38CF5FF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C844F76289ED2CD00183693 /* Alamofire.framework */,
+				7C844F78289ED2CD00183693 /* Realm.framework */,
+				7C844F7A289ED2CD00183693 /* RealmSwift.framework */,
+				7C844F7C289ED2CD00183693 /* RxCocoa.framework */,
+				7C844F7E289ED2CD00183693 /* RxRelay.framework */,
+				7C844F80289ED2CD00183693 /* RxSwift.framework */,
+				7C844F74289EC79D00183693 /* RealmSwift.framework */,
 				7F0068F74100A1971E0891A7 /* Pods_TheChefzTask_Final.framework */,
 			);
 			name = Frameworks;
@@ -638,7 +586,6 @@
 				7C17190D289DD267000F02AD /* NavigationRoute.swift in Sources */,
 				7C844F3D289EAA8800183693 /* SearchRepository.swift in Sources */,
 				7C17190E289DD267000F02AD /* Route.swift in Sources */,
-				7C844F50289EAEDE00183693 /* MockNetworkManager.swift in Sources */,
 				7C171913289DD267000F02AD /* SearchViewModel.swift in Sources */,
 				7C171901289DD267000F02AD /* NetworkManager.swift in Sources */,
 				7C171919289DD267000F02AD /* BookDetailsViewController.swift in Sources */,
@@ -651,7 +598,6 @@
 				7C171905289DD267000F02AD /* NetworkServiceProtocol.swift in Sources */,
 				7C171902289DD267000F02AD /* BooksResponse.swift in Sources */,
 				7C171916289DD267000F02AD /* SearchViewController.swift in Sources */,
-				7C844F52289EAF7F00183693 /* MockRealmManager.swift in Sources */,
 				7C171918289DD267000F02AD /* BookDetailsViewModel.swift in Sources */,
 				7C171900289DD267000F02AD /* NetworkRouter.swift in Sources */,
 				7C171912289DD267000F02AD /* MainViewController.swift in Sources */,
@@ -667,12 +613,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C844F63289EC18E00183693 /* RealDatabaseTests.swift in Sources */,
 				7C844F5A289EC13600183693 /* SearchViewModelTests.swift in Sources */,
 				7C844F58289EC04200183693 /* MainViewModelTests.swift in Sources */,
-				7C844F5F289EC17600183693 /* RealNetworkTests.swift in Sources */,
-				7C844F5C289EC16900183693 /* MockNetworkTests.swift in Sources */,
-				7C844F61289EC18500183693 /* MockDatabaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
