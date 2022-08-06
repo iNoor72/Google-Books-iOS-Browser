@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 class MainViewModel {
-    private let repository: BooksRepository
+    private let repository: MainScreenRepository
     
     var lastSearchBehavior = BehaviorRelay<String>(value: "")
     private var booksModelSubject = PublishSubject<[Book]>()
@@ -19,7 +19,7 @@ class MainViewModel {
         return booksModelSubject
     }
     
-    init(repository: BooksRepository = BooksRepository(cache: RealmManager.shared, network: NetworkManager.shared)) {
+    init(repository: MainScreenRepository = MainScreenRepository(cache: RealmManager.shared, network: NetworkManager.shared)) {
         self.repository = repository
     }
     

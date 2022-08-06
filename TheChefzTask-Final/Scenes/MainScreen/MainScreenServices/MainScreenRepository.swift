@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BooksRepository {
+class MainScreenRepository {
     private let cache: DatabaseProtocol
     private let network: NetworkServiceProtocol
     
