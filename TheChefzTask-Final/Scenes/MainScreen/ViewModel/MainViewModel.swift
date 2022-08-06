@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 class MainViewModel {
-    private let databaseManager: DatabaseProtocol
+    private let repository: BooksRepository
     
     var lastSearchBehavior = BehaviorRelay<String>(value: "")
     private var booksModelSubject = PublishSubject<[Book]>()
@@ -19,17 +19,17 @@ class MainViewModel {
         return booksModelSubject
     }
     
-    init(databaseManager: DatabaseProtocol = RealmManager.shared) {
-        self.databaseManager = databaseManager
+    init(repository: BooksRepository = BooksRepository(cache: RealmManager.shared, network: NetworkManager.shared)) {
+        self.repository = repository
     }
     
     func fetchLastSearch() {
-        let keyword = databaseManager.fetchLastSearch()
-        lastSearchBehavior = BehaviorRelay.init(value: keyword?.first?.bookTitle ?? "No search.")
+        let keyword = repository.fetchLastSearchKeyword()
+        lastSearchBehavior = BehaviorRelay.init(value: keyword ?? "No search.")
     }
     
     func fetchBooksFromDatabase() {
-        databaseManager.fetch { [weak self] books in
+        repository.fetchDataFromDatabase { [weak self] books in
             guard let self = self else { return }
             
             self.booksModelSubject.onNext(books)
