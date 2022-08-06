@@ -11,7 +11,7 @@ import RxCocoa
 
 class SearchViewModel {
     private let repository: SearchRepository
-    var books: BooksResponse?
+    var books: BooksResponse = BooksResponse()
     
     var isIndicatorOffSubject = BehaviorSubject<Bool>(value: true)
     var isIndicatorHiddenSubject = BehaviorSubject<Bool>(value: true)
@@ -68,13 +68,13 @@ class SearchViewModel {
                 print("Error! \(error)")
                 
             case .success(let books):
-                if let _ = self.books {
-                    for book in books.items {
-                        self.books?.items.append(book)
-                    }
-                    let bookItems = Array<Book>(self.books!.items)
-                    self.booksModelSubject.onNext(bookItems)
+                for book in books.items {
+                    self.books.items.append(book)
                 }
+                let bookItems = Array<Book>(self.books.items)
+                self.booksModelSubject.onNext(bookItems)
+                self.saveSearchToDatabase(books: bookItems)
+                
             }
             self.isIndicatorOffSubject.onNext(true)
             self.isIndicatorHiddenSubject.onNext(true)
@@ -93,11 +93,11 @@ class SearchViewModel {
                 print("Error! \(error)")
                 
             case .success(let books):
-                    self.books = books
-                    let bookItems = Array(books.items)
-                    self.booksModelSubject.onNext(bookItems)
-                    self.deleteLastSearchResult()
-                    print(books)
+                self.books = books
+                let bookItems = Array(books.items)
+                self.booksModelSubject.onNext(bookItems)
+                self.deleteLastSearchResult()
+                print(books)
             }
             self.isIndicatorOffSubject.onNext(true)
             self.isIndicatorHiddenSubject.onNext(true)

@@ -34,12 +34,12 @@ class SearchViewController: UIViewController, UICollectionViewDelegate {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+
         saveSearch()
     }
     
     private func saveSearch() {
-        guard let books = searchViewModel.books?.items else { return }
+        let books = searchViewModel.books.items
         let booksArray = Array(books)
         self.searchViewModel.saveSearchToDatabase(books: booksArray)
     }
