@@ -10,25 +10,23 @@ import RxSwift
 import RxCocoa
 
 class SearchViewModel {
-//    private let databaseManager: DatabaseProtocol
-//    private let networkManager: NetworkServiceProtocol
-    private let repository:  SearchRepository
-    
-    init(repository: SearchRepository = SearchRepository(cache: RealmManager.shared, network: NetworkManager.shared)) {
-        self.repository = repository
-    }
-    
     var books: BooksResponse?
     
+    var isIndicatorOffSubject = BehaviorSubject<Bool>(value: true)
+    var isIndicatorHiddenSubject = BehaviorSubject<Bool>(value: true)
     var bookNameBehavior = BehaviorRelay<String>(value: "")
+    
     private var booksModelSubject = BehaviorSubject<[Book]>(value: [])
     
     var booksModelObservable : Observable<[Book]> {
         return booksModelSubject
     }
     
-    var isIndicatorOffSubject = BehaviorSubject<Bool>(value: true)
-    var isIndicatorHiddenSubject = BehaviorSubject<Bool>(value: true)
+    private let repository: SearchRepository
+    
+    init(repository: SearchRepository = SearchRepository(cache: RealmManager.shared, network: NetworkManager.shared)) {
+        self.repository = repository
+    }
     
     func deleteLastSearchResult() {
         repository.deleteLastSearchResultFromDatabase()
