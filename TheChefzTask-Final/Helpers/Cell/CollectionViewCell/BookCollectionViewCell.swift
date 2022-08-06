@@ -16,6 +16,14 @@ class BookCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.bookThumbnail.layer.cornerRadius = 4.0
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderWidth = 0.7
+        self.layer.cornerRadius = 8.0
+    }
+    
     func setupCell(bookImage: String, bookTitle: String) {
         self.bookTitle.text = bookTitle
         guard let imageURL = URL(string: bookImage) else { return }
