@@ -1,10 +1,9 @@
-# TheChefzTask
+# Google-Books-iOS-Browser
 
-TheChefzTask is a project build for TheChefz company.
+Google-Books-iOS-Browser is a project build as a technical task.
 
 ## Description
-This is my implementation for the task requested by TheChefz company. An iOS books app to fetch books connected to google books API with some cool features.
-It's an iOS app that shows books to the user based on the user's search with the ability to save books from last search.
+An iOS books app to fetch books connected to google books API with some cool features. It's an iOS app that shows books to the user based on the user's search with the ability to save books from last search.
 
 ## Getting started
 To run the project, clone the project and run the following commands:
@@ -29,6 +28,3 @@ pod install
 - RxSwift: Used as a Reactive wrapper for the app.
 - RxCocoa: The Reactive library for UIKit.
 - RealmSwift: Used for saving and persisting the books for the user.
-
-## Project status
-The project is completed in what was mentioned in the requirements document, however, it could have been done with better Unit testing and better UX if possible.
